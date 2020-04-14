@@ -1,12 +1,14 @@
 pipeline {
     agent {
-        dockerfile true
+        dockerfile {
+            label 'generic'
+        }
     } //agent
     stages {
         stage("Run hello world"){
             steps {
                 sh """
-                    python hello.py
+                    python requestgoogle.py
                 """
             } // staeps
         } // stage
