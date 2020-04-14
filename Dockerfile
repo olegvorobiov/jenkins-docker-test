@@ -1,2 +1,2 @@
-FROM python: latest
+FROM python:latest
 RUN pip install requests
